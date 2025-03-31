@@ -1,22 +1,37 @@
-import { StrictMode } from 'react'
-import { createRoot } from 'react-dom/client'
-import './index.css'
-import {
-  createBrowserRouter,
-  RouterProvider,
-} from "react-router-dom";
+import ReactDOM from "react-dom/client";
+import { StrictMode } from "react";
+import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import { Provider } from "react-redux";
+import "./index.css";
+import HomeLayout from "./Home/HomeLayout/HomeLayout";
+import AppView from "./Views/AppView";
+import store from "./Shear/store";
+import Contact from "./components/Contact/Contact";
 
-import AppView from '../src/Views/AppView'
-
+// Define the routes
 const router = createBrowserRouter([
   {
     path: "/",
-    element: <AppView />
+    element: <HomeLayout />,  
+    children: [
+      {
+        path: "/", 
+        element: <AppView />,
+      },
+      {
+        path: "/contact",
+        element: <Contact />,
+      }
+    ],
   },
 ]);
 
-createRoot(document.getElementById('root')).render(
+// Render the app with Redux, Router, and i18next support
+const root = ReactDOM.createRoot(document.getElementById("root"));
+root.render(
   <StrictMode>
-    <RouterProvider router={router} />
-  </StrictMode>,
-)
+    <Provider store={store}>
+      <RouterProvider router={router} />  
+    </Provider>
+  </StrictMode>
+);

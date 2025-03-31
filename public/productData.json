@@ -1,0 +1,137 @@
+[
+ {
+   "id": 1,
+   "title": "Samsung Galaxy",
+   "price": 700.0,
+   "lastPrice": 900.0,
+   "img": "./images/3.png",
+   "quantity": 3,
+   "category": "Phones"
+ },
+ {
+   "id": 2,
+   "title": "Moto G5 Plus",
+   "price": 600.0,
+   "lastPrice": 700.0,
+   "img": "https://res.cloudinary.com/drecbsopp/image/upload/v1627398477/MotoGPowerDual_2021_Reformatted_1_330x_wp8gve.png",
+   "quantity": 1,
+   "category": "Phones"
+ },
+ {
+   "id": 3,
+   "title": "Xiaomi Redmi",
+   "price": 500.0,
+   "lastPrice": 600.0,
+   "img": "https://res.cloudinary.com/drecbsopp/image/upload/v1627398543/D7A7DA95-AEF8-228B-A2D2-A3FEBF237C33_y9p6wq.png",
+   "quantity": 1,
+   "category": "Phones"
+ },
+ {
+   "id": 4,
+   "title": "Nike Jordan",
+   "price": 400.0,
+   "lastPrice": 500.0,
+   "img": "./images/seconde.png",
+   "quantity": 1,
+   "category": "Clothes"
+ },
+ {
+   "id": 5,
+   "title": "Nike Air Max",
+   "price": 4000.0,
+   "lastPrice": 500.0,
+   "img": "./images/nikee.png",
+   "quantity": 1,
+   "category": "Clothes"
+ },
+ {
+   "id": 6,
+   "title": "Converse",
+   "price": 200.0,
+   "lastPrice": 100.0,
+   "img": "./images/pro4.png",
+   "quantity": 1,
+   "category": "Clothes"
+ },
+ {
+   "id": 7,
+   "title": "Casque Music",
+   "price": 700.0,
+   "lastPrice": 400.0,
+   "img": "./images/wall.jpg",
+   "quantity": 1,
+   "category": "Electronic"
+ },
+ {
+   "id": 8,
+   "title": "T-shirt Nike",
+   "price": 150.0,
+   "lastPrice": 200.0,
+   "img": "./images/tshirt2.jpg",
+   "quantity": 1,
+   "category": "Clothes"
+ },
+ {
+   "id": 9,
+   "title": "Lenovo Ipade560",
+   "price": 9820.0,
+   "lastPrice": 2770.0,
+   "img": "./images/laptop2.png",
+   "quantity": 1,
+   "category": "laptop"
+ },
+ {
+   "id": 10,
+   "title": "Dell XR145",
+   "price": 7050.0,
+   "lastPrice": 2400.0,
+   "img": "./images/laptop3.png",
+   "quantity": 1,
+   "category": "laptop"
+ },
+ {
+   "id": 11,
+   "title": "Sofa Big",
+   "price": 350.0,
+   "lastPrice": 400.0,
+   "img": "./images/hm1.png",
+   "quantity": 1,
+   "category": "kitchen"
+ },
+ {
+   "id": 12,
+   "title": "Vaze Floures",
+   "price": 150.0,
+   "lastPrice": 200.0,
+   "img": "./images/hm2.png",
+   "quantity": 1,
+   "category": "kitchen"
+ },
+ {
+   "id": 13,
+   "title": "Bottele",
+   "price": 50.0,
+   "lastPrice": 70.0,
+   "img": "./images/hm3.jpg",
+   "quantity": 1,
+   "category": "kitchen"
+ },
+ {
+   "id": 14,
+   "title": "Accessories Cars",
+   "price": 500.0,
+   "lastPrice": 7000.0,
+   "img": "./images/acc.png",
+   "quantity": 1,
+   "category": "Accessories"
+ },
+ {
+   "id": 15,
+   "title": "Cable Charge",
+   "price": 500.0,
+   "lastPrice": 750.0,
+   "img": "./images/acc2.png",
+   "quantity": 1,
+   "category": "Accessories"
+ }
+]
