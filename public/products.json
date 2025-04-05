@@ -1,0 +1,377 @@
+[
+  {
+    "id": 1,
+    "title": "Samsung Galaxy S23",
+    "price": 799.99,
+    "lastPrice": 899.99,
+    "img": "https://i.ibb.co.com/TMYRD9DK/10.jpg",
+    "quantity": 20,
+    "category": "Electronics - Phones",
+    "countryFlag": "https://flagcdn.com/w320/kr.png",
+    "countryCode": "KR",
+    "description": "The latest Samsung flagship phone with a powerful camera and stunning display.",
+    "subCategory": "Smartphones",
+    "products": [
+      {
+        "_id": "samsung_s23_1",
+        "name": "Samsung Galaxy S23",
+        "img": "https://i.ibb.co.com/9pQqhKV/2.jpg",
+        "price": 799.99,
+        "oldPrice": 899.99,
+        "rating": 4.5,
+        "reviews": 120,
+        "sold": 50
+      }
+    ]
+  },
+  {
+    "id": 2,
+    "title": "Moto G Power 2023",
+    "price": 249.00,
+    "lastPrice": 299.00,
+    "img": "https://i.ibb.co.com/TMKgXT2h/13.jpg",
+    "quantity": 10,
+    "category": "Electronics - Phones",
+    "countryFlag": "https://flagcdn.com/w320/us.png",
+    "countryCode": "US",
+    "description": "A budget-friendly phone with long battery life.",
+    "subCategory": "Smartphones",
+    "products": [
+      {
+        "_id": "moto_g_power_1",
+        "name": "Moto G Power 2023",
+        "img": "https://i.ibb.co.com/Y70f8HNw/9.jpg",
+        "price": 249.00,
+        "oldPrice": 299.00,
+        "rating": 4.2,
+        "reviews": 80,
+        "sold": 30
+      }
+    ]
+  },
+  {
+    "id": 3,
+    "title": "Xiaomi Redmi Note 12",
+    "price": 199.00,
+    "lastPrice": 249.00,
+    "img": "https://i.ibb.co.com/9pQqhKV/2.jpg",
+    "quantity": 15,
+    "category": "Electronics - Phones",
+    "countryFlag": "https://flagcdn.com/w320/cn.png",
+    "countryCode": "CN",
+    "description": "A feature-rich phone with a great value proposition.",
+    "subCategory": "Smartphones",
+    "products": [
+      {
+        "_id": "xiaomi_redmi_1",
+        "name": "Xiaomi Redmi Note 12",
+        "img": "https://i.ibb.co.com/TMYRD9DK/10.jpg",
+        "price": 199.00,
+        "oldPrice": 249.00,
+        "rating": 4.0,
+        "reviews": 60,
+        "sold": 25
+      }
+    ]
+  },
+  {
+    "id": 4,
+    "title": "Nike Air Jordan 1",
+    "price": 170.00,
+    "lastPrice": 220.00,
+    "img": "https://i.ibb.co.com/vhrZGv9/1.jpg",
+    "quantity": 5,
+    "category": "Fashion - Shoes",
+    "countryFlag": "https://flagcdn.com/w320/us.png",
+    "countryCode": "US",
+    "description": "The iconic basketball shoe that started it all.",
+    "subCategory": "Sneakers",
+    "products": [
+      {
+        "_id": "nike_jordan_1",
+        "name": "Nike Air Jordan 1",
+        "img": "https://i.ibb.co.com/zXfDkXR/React-maste-2024.jpg",
+        "price": 170.00,
+        "oldPrice": 220.00,
+        "rating": 4.8,
+        "reviews": 150,
+        "sold": 70
+      }
+    ]
+  },
+  {
+    "id": 5,
+    "title": "Nike Air Max 90",
+    "price": 130.00,
+    "lastPrice": 150.00,
+    "img": "https://i.ibb.co.com/W38zfrN/6.jpg",
+    "quantity": 8,
+    "category": "Fashion - Shoes",
+    "countryFlag": "https0.com/w320/gb.png",
+    "countryCode": "GB",
+    "description": "A classic running shoe with visible Air cushioning.",
+    "subCategory": "Sneakers",
+    "products": [
+      {
+        "_id": "nike_air_max_90",
+        "name": "Nike Air Max 90",
+        "img": "https://i.ibb.co.com/LvT4CYz/5.jpg",
+        "price": 130.00,
+        "oldPrice": 150.00,
+        "rating": 4.6,
+        "reviews": 110,
+        "sold": 55
+      }
+    ]
+  },
+  {
+    "id": 6,
+    "title": "Converse Chuck Taylor All Star",
+    "price": 60.00,
+    "lastPrice": 75.00,
+    "img": "https://i.ibb.co.com/7thZZv6/4.jpg",
+    "quantity": 12,
+    "category": "Fashion - Shoes",
+    "countryFlag": "https://flagcdn.com/w320/fr.png",
+    "countryCode": "FR",
+    "description": "The timeless canvas sneaker that goes with everything.",
+    "subCategory": "Casual",
+    "products": [
+      {
+        "_id": "converse_chuck_taylor",
+        "name": "Converse Chuck Taylor All Star",
+        "img": "https://i.ibb.co.com/DL5RvFV/8.jpg",
+        "price": 60.00,
+        "oldPrice": 75.00,
+        "rating": 4.3,
+        "reviews": 90,
+        "sold": 40
+      }
+    ]
+  },
+  {
+    "id": 7,
+    "title": "Sony WH-1000XM5",
+    "price": 349.00,
+    "lastPrice": 399.00,
+    "img": "https://i.ibb.co.com/R2vkGH5/1.jpg",
+    "quantity": 3,
+    "category": "Electronics - Audio",
+    "countryFlag": "https://flagcdn.com/w320/jp.png",
+    "countryCode": "JP",
+    "description": "Industry-leading noise-canceling headphones with exceptional sound quality.",
+    "subCategory": "Headphones",
+    "products": [
+      {
+        "_id": "sony_wh1000xm5",
+        "name": "Sony WH-1000XM5",
+        "img": "https://i.ibb.co.com/R2vkGH5/1.jpg",
+        "price": 349.00,
+        "oldPrice": 399.00,
+        "rating": 4.9,
+        "reviews": 180,
+        "sold": 80
+      }
+    ]
+  },
+  {
+    "id": 8,
+    "title": "Nike Dri-FIT T-Shirt",
+    "price": 25.00,
+    "lastPrice": 30.00,
+    "img": "https://i.ibb.co.com/R2vkGH5/1.jpg",
+    "quantity": 25,
+    "category": "Fashion - Apparel",
+    "countryFlag": "https://flagcdn.com/w320/us.png",
+    "countryCode": "US",
+    "description": "A moisture-wicking t-shirt perfect for workouts.",
+    "subCategory": "Activewear",
+    "products": [
+      {
+        "_id": "nike_dri_fit_tshirt",
+        "name": "Nike Dri-FIT T-Shirt",
+        "img": "https://i.ibb.co.com/R2vkGH5/1.jpg",
+        "price": 25.00,
+        "oldPrice": 30.00,
+        "rating": 4.5,
+        "reviews": 120,
+        "sold": 60
+      }
+    ]
+  },
+  {
+    "id": 9,
+    "title": "Lenovo ThinkPad X1 Carbon",
+    "price": 1299.00,
+    "lastPrice": 1499.00,
+    "img": "https://i.ibb.co.com/R2vkGH5/1.jpg",
+    "quantity": 2,
+    "category": "Electronics - Computers",
+    "countryFlag": "https://flagcdn.com/w320/cn.png",
+    "countryCode": "CN",
+    "description": "A lightweight and powerful laptop for professionals.",
+    "subCategory": "Laptops",
+    "products": [
+      {
+        "_id": "lenovo_thinkpad_x1",
+        "name": "Lenovo ThinkPad X1 Carbon",
+        "img": "https://i.ibb.co.com/R2vkGH5/1.jpg",
+        "price": 1299.00,
+        "oldPrice": 1499.00,
+        "rating": 4.7,
+        "reviews": 160,
+        "sold": 75
+      }
+    ]
+  },
+  {
+    "id": 10,
+    "title": "Dell XPS 15",
+    "price": 1499.00,
+    "lastPrice": 1699.00,
+    "img": "https://i.ibb.co.com/R2vkGH5/1.jpg",
+    "quantity": 4,
+    "category": "Electronics - Computers",
+    "countryFlag": "https://flagcdn.com/w320/us.png",
+    "countryCode": "US",
+    "description": "A premium laptop with a stunning display and powerful performance.",
+    "subCategory": "Laptops",
+    "products": [
+      {
+        "_id": "dell_xps_15",
+        "name": "Dell XPS 15",
+        "img": "https://i.ibb.co.com/R2vkGH5/1.jpg",
+        "price": 1499.00,
+        "oldPrice": 1699.00,
+        "rating": 4.8,
+        "reviews": 170,
+        "sold": 85
+      }
+    ]
+  },
+  {
+    "id": 11,
+    "title": "IKEA Kivik Sofa",
+    "price": 499.00,
+    "lastPrice": 549.00,
+    "img": "https://i.ibb.co.com/R2vkGH5/1.jpg",
+    "quantity": 6,
+    "category": "Home & Garden - Furniture",
+    "countryFlag": "https://flagcdn.com/w320/se.png",
+    "countryCode": "SE",
+    "description": "A comfortable and stylish sofa for your living room.",
+    "subCategory": "Sofas",
+    "products": [
+      {
+        "_id": "ikea_kivik_sofa",
+        "name": "IKEA Kivik Sofa",
+        "img": "https://i.ibb.co.com/R2vkGH5/1.jpg",
+        "price": 499.00,
+        "oldPrice": 549.00,
+        "rating": 4.6,
+        "reviews": 130,
+        "sold": 65
+      }
+    ]
+  },
+  {
+    "id": 12,
+    "title": "Modern Ceramic Vase",
+    "price": 39.00,
+    "lastPrice": 49.00,
+    "img": "https://i.ibb.co.com/R2vkGH5/1.jpg",
+    "quantity": 10,
+    "category": "Home & Garden - Decor",
+    "countryFlag": "https://flagcdn.com/w320/es.png",
+    "countryCode": "ES",
+    "description": "A beautiful vase to display your flowers.",
+    "subCategory": "Vases",
+    "products": [
+      {
+        "_id": "modern_ceramic_vase",
+        "name": "Modern Ceramic Vase",
+        "img": "https://i.ibb.co.com/R2vkGH5/1.jpg",
+        "price": 39.00,
+        "oldPrice": 49.00,
+        "rating": 4.4,
+        "reviews": 100,
+        "sold": 50
+      }
+    ]
+  },
+  {
+    "id": 13,
+    "title": "Stainless Steel Water Bottle",
+    "price": 20.00,
+    "lastPrice": 25.00,
+    "img": "https://i.ibb.co.com/R2vkGH5/1.jpg",
+    "quantity": 30,
+    "category": "Home & Garden - Kitchen",
+    "countryFlag": "https://flagcdn.com/w320/cn.png",
+    "countryCode": "CN",
+    "description": "An eco-friendly and durable water bottle.",
+    "subCategory": "Drinkware",
+    "products": [
+      {
+        "_id": "stainless_steel_water_bottle",
+        "name": "Stainless Steel Water Bottle",
+        "img": "https://i.ibb.co.com/R2vkGH5/1.jpg",
+        "price": 20.00,
+        "oldPrice": 25.00,
+        "rating": 4.3,
+        "reviews": 90,
+        "sold": 45
+      }
+    ]
+  },
+  {
+    "id": 14,
+    "title": "Car Floor Mats",
+    "price": 49.00,
+    "lastPrice": 59.00,
+    "img": "https://i.ibb.co.com/1QXwT41/Rectangle-1.png",
+    "quantity": 5,
+    "category": "Automotive - Accessories",
+    "countryFlag": "https://flagcdn.com/w320/de.png",
+    "countryCode": "DE",
+    "description": "Protect your car's interior with these durable mats.",
+    "subCategory": "Interior",
+    "products": [
+      {
+        "_id": "car_floor_mats",
+        "name": "Car Floor Mats",
+        "img": "https://i.ibb.co.com/1QXwT41/Rectangle-1.png",
+        "price": 49.00,
+        "oldPrice": 59.00,
+        "rating": 4.2,
+        "reviews": 80,
+        "sold": 40
+      }
+    ]
+  },
+  {
+    "id": 15,
+    "title": "USB-C Charging Cable",
+    "price": 15.00,
+    "lastPrice": 19.00,
+    "img": "https://i.ibb.co.com/kKZTnc9/orange-fa78d040-fd3c-42ac-ae2b-5074d41710fc-1200x.webp",
+    "quantity": 50,
+    "category": "Electronics - Accessories",
+    "countryFlag": "https://flagcdn.com/w320/kr.png",
+    "countryCode": "KR",
+    "description": "A high-quality cable for charging your devices.",
+    "subCategory": "Cables",
+    "products": [
+      {
+        "_id": "usb_c_cable",
+        "name": "USB-C Charging Cable",
+        "img": "https://i.ibb.co.com/c8QwZ9X/woman-in-business-attire-wearing-t-2e16d0ba-fill-730x395.png",
+        "price": 15.00,
+        "oldPrice": 19.00,
+        "rating": 4.1,
+        "reviews": 70,
+        "sold": 35
+      }
+    ]
+  }
+]

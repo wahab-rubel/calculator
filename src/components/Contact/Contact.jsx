@@ -1,11 +1,9 @@
 import React, { useState } from "react";
 import emailjs from "@emailjs/browser";
 
-import AnimatePage from "../../animation/AnimatePage";
-
-
 const Contact = () => {
   const [Result, setResult] = useState(false);
+  // eslint-disable-next-line no-unused-vars
   const [checked, setChecked] = useState(false);
 
   const RemoveAlert = () => {
@@ -15,7 +13,7 @@ const Contact = () => {
   const sendEmail = (e) => {
     e.preventDefault();
     if (!checked) {
-      alert(("agreeToSendCopy"));
+      alert("Please agree to send a copy.");
       return;
     }
 
@@ -34,107 +32,415 @@ const Contact = () => {
         },
         (error) => {
           console.log("FAILED...", error.text);
-          alert(("failedToSend"));
+          alert("Failed to send message.");
         }
       );
   };
 
   return (
-    <AnimatePage>
-      <div className="container my-24 px-6 mx-auto">
-        <section className="text-gray-800">
-          <div
-            className="bgContactUs relative overflow-hidden bg-no-repeat bg-cover"
-            style={{
-              backgroundPosition: "50%",
-              height: 300,
-            }}
-          ></div>
-          <div className="container text-gray-800 px-4 md:px-12">
-            <div
-              className="block rounded-lg shadow-lg py-10 md:py-12 px-4 md:px-6"
-              style={{
-                marginTop: "-100px",
-                background: "hsla(0, 0%, 100%, 0.8)",
-                backdropFilter: "blur(30px)",
-              }}
-            >
-              <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-x-6">
-                <div className="lg:mb-0 text-center mx-auto">
-                  <a
-                    href="https://goo.gl/maps/oevpwbCtZ7inta9M7"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    <svg
-                      className="w-8 h-8 text-blue-500 mb-6 mx-auto"
-                      xmlns="http://www.w3.org/2000/svg"
-                      viewBox="0 0 496 512"
-                    >
-                      <path
-                        fill="currentColor"
-                        d="M248 8C111.03 8 0 119.03 0 256s111.03 248 248 248 248-111.03 248-248S384.97 8 248 8zm82.29 357.6c-3.9 3.88-7.99 7.95-11.31 11.28-2.99 3-5.1 6.7-6.17 10.71-1.51 5.66-2.73 11.38-4.77 16.87l-17.39 46.85c-13.76 3-28 4.69-42.65 4.69v-27.38c1.69-12.62-7.64-36.26-22.63-51.25-6-6-9.37-14.14-9.37-22.63v-32.01c0-11.64-6.27-22.34-16.46-27.97-14.37-7.95-34.81-19.06-48.81-26.11-11.48-5.78-22.1-13.14-31.65-21.75l-.8-.72a114.792 114.792 0 0 1-18.06-20.74c-9.38-13.77-24.66-36.42-34.59-51.14 20.47-45.5 57.36-82.04 103.2-101.89l24.01 12.01C203.48 89.74 216 82.01 216 70.11v-11.3c7.99-1.29 16.12-2.11 24.39-2.42l28.3 28.3c6.25 6.25 6.25 16.38 0 22.63L264 112l-10.34 10.34c-3.12 3.12-3.12 8.19 0 11.31l4.69 4.69c3.12 3.12 3.12 8.19 0 11.31l-8 8a8.008 8.008 0 0 1-5.66 2.34h-8.99c-2.08 0-4.08.81-5.58 2.27l-9.92 9.65a8.008 8.008 0 0 0-1.58 9.31l15.59 31.19c2.66 5.32-1.21 11.58-7.15 11.58h-5.64c-1.93 0-3.79-.7-5.24-1.96l-9.28-8.06a16.017 16.017 0 0 0-15.55-3.1l-31.17 10.39a11.95 11.95 0 0 0-8.17 11.34c0 4.53 2.56 8.66 6.61 10.69l11.08 5.54c9.41 4.71 19.79 7.16 30.31 7.16s22.59 27.29 32 32h66.75c8.49 0 16.62 3.37 22.63 9.37l13.69 13.69a30.503 30.503 0 0 1 8.93 21.57 46.536 46.536 0 0 1-13.72 32.98zM417 274.25c-5.79-1.45-10.84-5-14.15-9.97l-17.98-26.97a23.97 23.97 0 0 1 0-26.62l19.59-29.38c2.32-3.47 5.5-6.29 9.24-8.15l12.98-6.49C440.2 193.59 448 223.87 448 256c0 8.67-.74 17.16-1.82 25.54L417 274.25z"
-                      />
-                    </svg>
-                  </a>
-                  <h6 className="font-medium">{("location")}</h6>
+    <form onSubmit={sendEmail} className="container mx-auto bg-teal-500 ml-60 rounded-lg mt-16">
+      <div className="space-y-12">
+        <div className="border-b border-gray-900/10 pb-12">
+          <h2 className="text-base/7 font-semibold text-gray-900">Profile</h2>
+          <p className="mt-1 text-sm/6 text-gray-600">
+            This information will be displayed publicly so be careful what you share.
+          </p>
+
+          <div className="mt-10 grid grid-cols-1 gap-x-6 gap-y-8 sm:grid-cols-6">
+            <div className="sm:col-span-4">
+              <label htmlFor="username" className="block text-sm/6 font-medium text-gray-900">
+                Username
+              </label>
+              <div className="mt-2">
+                <div className="flex items-center rounded-md bg-white pl-3 outline-1 -outline-offset-1 outline-gray-300 focus-within:outline-2 focus-within:-outline-offset-2 focus-within:outline-indigo-600">
+                  <div className="shrink-0 text-base text-gray-500 select-none sm:text-sm/6">workcation.com/</div>
+                  <input
+                    id="username"
+                    name="username"
+                    type="text"
+                    placeholder="janesmith"
+                    className="block min-w-0 grow py-1.5 pr-3 pl-1 text-base text-gray-900 placeholder:text-gray-400 focus:outline-none sm:text-sm/6"
+                  />
                 </div>
-                <div className="lg:mb-0 text-center mx-auto">
-                  <form onSubmit={sendEmail}>
-                    <div className="form-group mb-6">
-                      <input
-                        type="text"
-                        className="form-control block w-full px-3 py-1.5 text-base font-normal text-gray-700 bg-white bg-clip-padding border border-solid border-gray-300 rounded transition ease-in-out m-0 focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none"
-                        id="name"
-                        name="user_name"
-                        placeholder={("fullName")}
-                      />
-                    </div>
-                    <div className="form-group mb-6">
-                      <input
-                        type="email"
-                        className="form-control block w-full px-3 py-1.5 text-base font-normal text-gray-700 bg-white bg-clip-padding border border-solid border-gray-300 rounded transition ease-in-out m-0 focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none"
-                        id="email"
-                        name="user_email"
-                        placeholder={("email")}
-                      />
-                    </div>
-                    <div className="form-group mb-6">
-                      <textarea
-                        className="form-control block w-full px-3 py-1.5 text-base font-normal text-gray-700 bg-white bg-clip-padding border border-solid border-gray-300 rounded transition ease-in-out m-0 focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none"
-                        id="message"
-                        name="message"
-                        rows="3"
-                        placeholder={("message")}
-                      ></textarea>
-                    </div>
-                    <div className="form-check form-check-inline mb-6">
-                      <input
-                        className="form-check-input appearance-none w-4 h-4 border border-gray-300 rounded-sm bg-white checked:bg-blue-600 checked:border-blue-600 focus:outline-none transition duration-200 mt-1 align-top bg-no-repeat bg-center bg-contain cursor-pointer"
-                        type="checkbox"
-                        id="checkbox"
-                        name="agree"
-                        onChange={() => setChecked(!checked)}
-                      />
-                      <label className="form-check-label inline-block text-gray-800 ml-2">
-                        {("agree")}
-                      </label>
-                    </div>
-                    <button
-                      type="submit"
-                      className="btn bg-blue-500 text-white px-6 py-3 rounded-full shadow-md hover:bg-blue-600"
+              </div>
+            </div>
+
+            <div className="col-span-full">
+              <label htmlFor="about" className="block text-sm/6 font-medium text-gray-900">
+                About
+              </label>
+              <div className="mt-2">
+                <textarea
+                  id="about"
+                  name="about"
+                  rows={3}
+                  className="block w-full rounded-md bg-white px-3 py-1.5 text-base text-gray-900 outline-1 -outline-offset-1 outline-gray-300 placeholder:text-gray-400 focus:outline-2 focus:-outline-offset-2 focus:outline-indigo-600 sm:text-sm/6"
+                  defaultValue={''}
+                />
+              </div>
+              <p className="mt-3 text-sm/6 text-gray-600">Write a few sentences about yourself.</p>
+            </div>
+
+            <div className="col-span-full">
+              <label htmlFor="photo" className="block text-sm/6 font-medium text-gray-900">
+                Photo
+              </label>
+              <div className="mt-2 flex items-center gap-x-3">
+                <button
+                  type="button"
+                  className="rounded-md bg-white px-2.5 py-1.5 text-sm font-semibold text-gray-900 ring-1 shadow-xs ring-gray-300 ring-inset hover:bg-gray-50"
+                >
+                  Change
+                </button>
+              </div>
+            </div>
+
+            <div className="col-span-full">
+              <label htmlFor="cover-photo" className="block text-sm/6 font-medium text-gray-900">
+                Cover photo
+              </label>
+              <div className="mt-2 flex justify-center rounded-lg border border-dashed border-gray-900/25 px-6 py-10">
+                <div className="text-center">
+                  <div className="mt-4 flex text-sm/6 text-gray-600">
+                    <label
+                      htmlFor="file-upload"
+                      className="relative cursor-pointer rounded-md bg-white font-semibold text-indigo-600 focus-within:ring-2 focus-within:ring-indigo-600 focus-within:ring-offset-2 focus-within:outline-hidden hover:text-indigo-500"
                     >
-                      {("sendMessage")}
-                    </button>
-                  </form>
+                      <span>Upload a file</span>
+                      <input id="file-upload" name="file-upload" type="file" className="sr-only" />
+                    </label>
+                    <p className="pl-1">or drag and drop</p>
+                  </div>
+                  <p className="text-xs/5 text-gray-600">PNG, JPG, GIF up to 10MB</p>
                 </div>
               </div>
             </div>
           </div>
-        </section>
-        {Result && <ResultAlert RemoveAlert={RemoveAlert} />}
+        </div>
+
+        <div className="border-b border-gray-900/10 pb-12">
+          <h2 className="text-base/7 font-semibold text-gray-900">Personal Information</h2>
+          <p className="mt-1 text-sm/6 text-gray-600">Use a permanent address where you can receive mail.</p>
+
+          <div className="mt-10 grid grid-cols-1 gap-x-6 gap-y-8 sm:grid-cols-6">
+            <div className="sm:col-span-3">
+              <label htmlFor="first-name" className="block text-sm/6 font-medium text-gray-900">
+                First name
+              </label>
+              <div className="mt-2">
+                <input
+                  id="first-name"
+                  name="first-name"
+                  type="text"
+                  autoComplete="given-name"
+                  className="block w-full rounded-md bg-white px-3 py-1.5 text-base text-gray-900 outline-1 -outline-offset-1 outline-gray-300 placeholder:text-gray-400 focus:outline-2 focus:-outline-offset-2 focus:outline-indigo-600 sm:text-sm/6"
+                />
+              </div>
+            </div>
+
+            <div className="sm:col-span-3">
+              <label htmlFor="last-name" className="block text-sm/6 font-medium text-gray-900">
+                Last name
+              </label>
+              <div className="mt-2">
+                <input
+                  id="last-name"
+                  name="last-name"
+                  type="text"
+                  autoComplete="family-name"
+                  className="block w-full rounded-md bg-white px-3 py-1.5 text-base text-gray-900 outline-1 -outline-offset-1 outline-gray-300 placeholder:text-gray-400 focus:outline-2 focus:-outline-offset-2 focus:outline-indigo-600 sm:text-sm/6"
+                />
+              </div>
+            </div>
+
+            <div className="sm:col-span-4">
+              <label htmlFor="email" className="block text-sm/6 font-medium text-gray-900">
+                Email address
+              </label>
+              <div className="mt-2">
+                <input
+                  id="email"
+                  name="email"
+                  type="email"
+                  autoComplete="email"
+                  className="block w-full rounded-md bg-white px-3 py-1.5 text-base text-gray-900 outline-1 -outline-offset-1 outline-gray-300 placeholder:text-gray-400 focus:outline-2 focus:-outline-offset-2 focus:outline-indigo-600 sm:text-sm/6"
+                />
+              </div>
+            </div>
+
+            <div className="sm:col-span-3">
+              <label htmlFor="country" className="block text-sm/6 font-medium text-gray-900">
+                Country
+              </label>
+              <div className="mt-2 grid grid-cols-1">
+                <select
+                  id="country"
+                  name="country"
+                  autoComplete="country-name"
+                  className="col-start-1 row-start-1 w-full appearance-none rounded-md bg-white py-1.5 pr-8 pl-3 text-base text-gray-900 outline-1 -outline-offset-1 outline-gray-300 focus:outline-2 focus:-outline-offset-2 focus:outline-indigo-600 sm:text-sm/6"
+                >
+                  <option>United States</option>
+                  <option>Canada</option>
+                  <option>Mexico</option>
+                </select>
+              </div>
+            </div>
+
+            <div className="col-span-full">
+              <label htmlFor="street-address" className="block text-sm/6 font-medium text-gray-900">
+                Street address
+              </label>
+              <div className="mt-2">
+                <input
+                  id="street-address"
+                  name="street-address"
+                  type="text"
+                  autoComplete="street-address"
+                  className="block w-full rounded-md bg-white px-3 py-1.5 text-base text-gray-900 outline-1 -outline-offset-1 outline-gray-300 placeholder:text-gray-400 focus:outline-2 focus:-outline-offset-2 focus:outline-indigo-600 sm:text-sm/6"
+                />
+              </div>
+            </div>
+
+            <div className="sm:col-span-2 sm:col-start-1">
+              <label htmlFor="city" className="block text-sm/6 font-medium text-gray-900">
+                City
+              </label>
+              <div className="mt-2">
+                <input
+                  id="city"
+                  name="city"
+                  type="text"
+                  autoComplete="address-level2"
+                  className="block w-full rounded-md bg-white px-3 py-1.5 text-base text-gray-900 outline-1 -outline-offset-1 outline-gray-300 placeholder:text-gray-400 focus:outline-2 focus:-outline-offset-2 focus:outline-indigo-600 sm:text-sm/6"
+                />
+              </div>
+            </div>
+
+            <div className="sm:col-span-2">
+              <label htmlFor="region" className="block text-sm/6 font-medium text-gray-900">
+                State / Province
+              </label>
+              <div className="mt-2">
+                <input
+                  id="region"
+                  name="region"
+                  type="text"
+                  autoComplete="address-level1"
+                  className="block w-full rounded-md bg-white px-3 py-1.5 text-base text-gray-900 outline-1 -outline-offset-1 outline-gray-300 placeholder:text-gray-400 focus:outline-2 focus:-outline-offset-2 focus:outline-indigo-600 sm:text-sm/6"
+                />
+              </div>
+            </div>
+
+            <div className="sm:col-span-2">
+              <label htmlFor="postal-code" className="block text-sm/6 font-medium text-gray-900">
+                ZIP / Postal code
+              </label>
+              <div className="mt-2">
+                <input
+                  id="postal-code"
+                  name="postal-code"
+                  type="text"
+                  autoComplete="postal-code"
+                  className="block w-full rounded-md bg-white px-3 py-1.5 text-base text-gray-900 outline-1 -outline-offset-1 outline-gray-300 placeholder:text-gray-400 focus:outline-2 focus:-outline-offset-2 focus:outline-indigo-600 sm:text-sm/6"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div className="border-b border-gray-900/10 pb-12">
+          <h2 className="text-base/7 font-semibold text-gray-900">Notifications</h2>
+          <p className="mt-1 text-sm/6 text-gray-600">
+            We'll always let you know about important changes, but you pick what else you want to hear about.
+          </p>
+
+          <div className="mt-10 space-y-10">
+            <fieldset>
+              <legend className="text-sm/6 font-semibold text-gray-900">By email</legend>
+              <div className="mt-6 space-y-6">
+                <div className="flex gap-3">
+                  <div className="flex h-6 shrink-0 items-center">
+                    <div className="group grid size-4 grid-cols-1">
+                      <input
+                        defaultChecked
+                        id="comments"
+                        name="comments"
+                        type="checkbox"
+                        aria-describedby="comments-description"
+                        className="col-start-1 row-start-1 appearance-none rounded-sm border border-gray-300 bg-white checked:border-indigo-600 checked:bg-indigo-600 indeterminate:border-indigo-600 indeterminate:bg-indigo-600 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600 disabled:border-gray-300 disabled:bg-gray-100 disabled:checked:bg-gray-100 forced-colors:appearance-auto"
+                      />
+                      <svg
+                        fill="none"
+                        viewBox="0 0 14 14"
+                        className="pointer-events-none col-start-1 row-start-1 size-3.5 self-center justify-self-center stroke-white group-has-disabled:stroke-gray-950/25"
+                      >
+                        <path
+                          d="M3 8L6 11L11 3.5"
+                          strokeWidth={2}
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                          className="opacity-0 group-has-checked:opacity-100"
+                        />
+                        <path
+                          d="M3 7H11"
+                          strokeWidth={2}
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                          className="opacity-0 group-has-indeterminate:opacity-100"
+                        />
+                      </svg>
+                    </div>
+                  </div>
+                  <div className="text-sm/6">
+                    <label htmlFor="comments" className="font-medium text-gray-900">
+                      Comments
+                    </label>
+                    <p id="comments-description" className="text-gray-500">
+                      Get notified when someones posts a comment on a posting.
+                    </p>
+                  </div>
+                </div>
+                <div className="flex gap-3">
+                  <div className="flex h-6 shrink-0 items-center">
+                    <div className="group grid size-4 grid-cols-1">
+                      <input
+                        id="candidates"
+                        name="candidates"
+                        type="checkbox"
+                        aria-describedby="candidates-description"
+                        className="col-start-1 row-start-1 appearance-none rounded-sm border border-gray-300 bg-white checked:border-indigo-600 checked:bg-indigo-600 indeterminate:border-indigo-600 indeterminate:bg-indigo-600 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600 disabled:border-gray-300 disabled:bg-gray-100 disabled:checked:bg-gray-100 forced-colors:appearance-auto"
+                      />
+                      <svg
+                        fill="none"
+                        viewBox="0 0 14 14"
+                        className="pointer-events-none col-start-1 row-start-1 size-3.5 self-center justify-self-center stroke-white group-has-disabled:stroke-gray-950/25"
+                      >
+                        <path
+                          d="M3 8L6 11L11 3.5"
+                          strokeWidth={2}
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                          className="opacity-0 group-has-checked:opacity-100"
+                        />
+                        <path
+                          d="M3 7H11"
+                          strokeWidth={2}
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                          className="opacity-0 group-has-indeterminate:opacity-100"
+                        />
+                      </svg>
+                    </div>
+                  </div>
+                  <div className="text-sm/6">
+                    <label htmlFor="candidates" className="font-medium text-gray-900">
+                      Candidates
+                    </label>
+                    <p id="candidates-description" className="text-gray-500">
+                      Get notified when a candidate applies for a job.
+                    </p>
+                  </div>
+                </div>
+                <div className="flex gap-3">
+                  <div className="flex h-6 shrink-0 items-center">
+                    <div className="group grid size-4 grid-cols-1">
+                      <input
+                        id="offers"
+                        name="offers"
+                        type="checkbox"
+                        aria-describedby="offers-description"
+                        className="col-start-1 row-start-1 appearance-none rounded-sm border border-gray-300 bg-white checked:border-indigo-600 checked:bg-indigo-600 indeterminate:border-indigo-600 indeterminate:bg-indigo-600 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600 disabled:border-gray-300 disabled:bg-gray-100 disabled:checked:bg-gray-100 forced-colors:appearance-auto"
+                      />
+                      <svg
+                        fill="none"
+                        viewBox="0 0 14 14"
+                        className="pointer-events-none col-start-1 row-start-1 size-3.5 self-center justify-self-center stroke-white group-has-disabled:stroke-gray-950/25"
+                      >
+                        <path
+                          d="M3 8L6 11L11 3.5"
+                          strokeWidth={2}
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                          className="opacity-0 group-has-checked:opacity-100"
+                        />
+                        <path
+                          d="M3 7H11"
+                          strokeWidth={2}
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                          className="opacity-0 group-has-indeterminate:opacity-100"
+                        />
+                      </svg>
+                    </div>
+                  </div>
+                  <div className="text-sm/6">
+                    <label htmlFor="offers" className="font-medium text-gray-900">
+                      Offers
+                    </label>
+                    <p id="offers-description" className="text-gray-500">
+                      Get notified when a candidate accepts or rejects an offer.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </fieldset>
+
+            <fieldset>
+              <legend className="text-sm/6 font-semibold text-gray-900">Push notifications</legend>
+              <p className="mt-1 text-sm/6 text-gray-600">These are delivered via SMS to your mobile phone.</p>
+              <div className="mt-6 space-y-6">
+                <div className="flex items-center gap-x-3">
+                  <input
+                    defaultChecked
+                    id="push-everything"
+                    name="push-notifications"
+                    type="radio"
+                    className="relative size-4 appearance-none rounded-full border border-gray-300 bg-white before:absolute before:inset-1 before:rounded-full before:bg-white not-checked:before:hidden checked:border-indigo-600 checked:bg-indigo-600 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600 disabled:border-gray-300 disabled:bg-gray-100 disabled:before:bg-gray-400 forced-colors:appearance-auto forced-colors:before:hidden"
+                  />
+                  <label htmlFor="push-everything" className="block text-sm/6 font-medium text-gray-900">
+                    Everything
+                  </label>
+                </div>
+                <div className="flex items-center gap-x-3">
+                  <input
+                    id="push-email"
+                    name="push-notifications"
+                    type="radio"
+                    className="relative size-4 appearance-none rounded-full border border-gray-300 bg-white before:absolute before:inset-1 before:rounded-full before:bg-white not-checked:before:hidden checked:border-indigo-600 checked:bg-indigo-600 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600 disabled:border-gray-300 disabled:bg-gray-100 disabled:before:bg-gray-400 forced-colors:appearance-auto forced-colors:before:hidden"
+                  />
+                  <label htmlFor="push-email" className="block text-sm/6 font-medium text-gray-900">
+                    Same as email
+                  </label>
+                </div>
+                <div className="flex items-center gap-x-3">
+                  <input
+                    id="push-nothing"
+                    name="push-notifications"
+                    type="radio"
+                    className="relative size-4 appearance-none rounded-full border border-gray-300 bg-white before:absolute before:inset-1 before:rounded-full before:bg-white not-checked:before:hidden checked:border-indigo-600 checked:bg-indigo-600 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600 disabled:border-gray-300 disabled:bg-gray-100 disabled:before:bg-gray-400 forced-colors:appearance-auto forced-colors:before:hidden"
+                  />
+                  <label htmlFor="push-nothing" className="block text-sm/6 font-medium text-gray-900">
+                    No push notifications
+                  </label>
+                </div>
+              </div>
+            </fieldset>
+          </div>
+        </div>
       </div>
-    </AnimatePage>
+
+      <div className="mt-6 flex items-center justify-end gap-x-6">
+        <button type="button" className="text-sm/6 font-semibold text-gray-900">
+          Cancel
+        </button>
+        <button
+          type="submit"
+          className="rounded-md bg-indigo-600 px-3 py-2 text-sm font-semibold text-white shadow-xs hover:bg-indigo-500 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
+        >
+          Save
+        </button>
+      </div>
+    </form>
   );
 };
 
